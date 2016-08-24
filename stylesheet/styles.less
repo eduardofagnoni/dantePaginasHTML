@@ -9,9 +9,17 @@
 @tamanhoFontDireita:1.0em;
 @tamanhoH2:2.0em;
 @tamanhoH3:1.7em;
+@tamanhoTextoBotao:1.5em;
 
 @laranja1:#e09b1b;
 @laranja2:#d27c0f;
+@branco:#ffffff;
+@cinza:#858585;
+@cinza2:#646464;
+@vermelho:#980000;
+
+@hoverMenuLaranja:#d27c0f;
+@hoverMenuLaranja2:#bf5c08;
 
 
 
@@ -41,6 +49,32 @@ img {border: none;}
 	padding: 0;
 	height: 100%;
 	width: 100%;
+}
+
+
+
+/*************************************************************
+**************************************************************
+*****                                                    *****
+*****                                                    *****
+*****               b o t o n e i r a                    *****
+*****                                                    *****
+*****                                                    *****
+**************************************************************
+*************************************************************/
+.btn-p1 {
+	background-color: @laranja1;
+	color: @branco;
+	font-size: @tamanhoTextoBotao;
+	padding: 0px 0px 0px 25px;
+	text-align: center;
+	border:none;
+	font-weight: 300px;
+}
+.btn-p1 span {
+	width: 59px;
+	height: 52px;
+	margin-left: 25px;
 }
 
 /*************************************************************
@@ -133,6 +167,17 @@ img {border: none;}
 			.navbar-default {
 				background-color:@laranja1;
 			}
+			.navbar-default .navbar-nav > li > a:hover,
+			.navbar-default .navbar-nav > li > a:focus {
+			  color: #ffffff;
+			  background-color:@hoverMenuLaranja; /*transparent;*/
+			}
+			.navbar-default .navbar-nav > .active > a,
+			.navbar-default .navbar-nav > .active > a:hover,
+			.navbar-default .navbar-nav > .active > a:focus {
+			  color: #ffffff;
+			  background-color:@hoverMenuLaranja; /*#e7e7e7;*/
+			}			
 			.dropdown-menu {
 				position: absolute;
 				top: 100%;
@@ -158,6 +203,21 @@ img {border: none;}
 				background-clip: padding-box;
 				/*background-color: red;*/
 			}			
+			
+			.dropdown-menu > li > a:hover,
+			.dropdown-menu > li > a:focus {
+				text-decoration: none;
+				color:#ffffff; /*#262626;*/
+				background-color:@hoverMenuLaranja2; /*#f5f5f5;*/
+			}
+			.dropdown-menu > .active > a,
+			.dropdown-menu > .active > a:hover,
+			.dropdown-menu > .active > a:focus {
+				color: #ffffff;
+				text-decoration: none;
+				outline: 0;
+				background-color:@hoverMenuLaranja2; /*#337ab7;*/
+			}
 
 			
 			.dropdown-menu li.secretaria {
@@ -232,11 +292,11 @@ section.paginas .aluno p {
 	margin:0;
 	padding:0;
 	font-size: 1.5em;
-	color: #858585;
+	color: @cinza;
 }
 section.paginas .aluno small {
 	font-size: 0.9em;
-	color: #858585;
+	color: @cinza;
 }
 section.paginas .aluno small a {
 	text-decoration: underline;
@@ -303,7 +363,81 @@ section.paginas .box-areas-alunos p {
 	text-align: justify;
 }
 
+								/*************************************************************
+								**************************************************************
+								*****                                                    *****
+								*****                                                    *****
+								*****                  p a g i n a s                     *****
+								*****                                                    *****
+								*****                                                    *****
+								**************************************************************
+								*************************************************************/
+								section.paginas .padrao-interno-1 {
+									padding-top: 120px;
+								}
+								section.paginas .padrao-interno-1 h3 {
+									padding: 17px 0px 17px 0px;
+									color: @laranja1;
+									font-size:@tamanhoH3;
+									font-weight: bold;
+								}
+								section.paginas .padrao-interno-1 h3 .responsavel {
+									font-size: 0.6em;
+									color: @branco;
+									background-color: @vermelho;
+									text-transform: uppercase;
+									padding: 7px 14px 7px 14px;
+									font-weight: 300;
+								}
+								section.paginas .padrao-interno-1 p {
+									padding: 17px 0px 17px 0px;
+									margin: 0;
+									font-size:@tamanhoFontDireita;
+									color: @cinza;
+									text-align: justify;
+								}
+								section.paginas .tabela-1 {
+									background-color: @branco;									
+								}
+								section.paginas .tabela-1 tr th {
+									border-bottom: solid 4px @laranja1;
+									padding: 17px 23px 17px 23px;
+									color: @laranja1;
+									font-size: @tamanhoH2;
+									font-weight: normal;
+								}
+								section.paginas .tabela-1 tr th + th {
+									font-weight: 300;
+								}
+								section.paginas .tabela-1 tr td {
+									padding: 17px 23px 17px 23px;
+									font-size: @tamanhoFontDireita;
+									color: @cinza;
+								}
+								section.paginas .tabela-1 ul {
+									text-align: center;
+								}
+								section.paginas .tabela-1 ul li {
+									list-style: none;
+									padding: 8px 0 8px 0;
+									border-bottom: solid 1px @cinza;
+									text-align: center;
+								}
+								section.paginas .tabela-1 ul li:last-child {
+									border-bottom: none;
+								}
+								section.paginas .tabela-1 ul li a {
+									color: @cinza;
+									text-decoration: none;
+									font-size: @tamanhoFontDireita;
+									text-align: center;
+								}
+								section.paginas .tabela-1 ul li a:hover {
+									color: @cinza2;
+								}
 
+
+									
 
 
 
@@ -427,8 +561,8 @@ section.paginas .box-areas-alunos p {
 	margin-bottom: 10px;
 	border: none;
 	padding: 4px;
-	border-bottom: solid 1px #858585;
-	color: #858585;
+	border-bottom: solid 1px @cinza;
+	color: @cinza;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -444,7 +578,7 @@ section.paginas .box-areas-alunos p {
 .tela-login .container .formulario-de-acesso-aluno .footer a {
 	margin:0;
 	padding: 0;
-	color: #858585;
+	color: @cinza;
 	text-decoration: underline;
 	font-family: 'Open Sans', sans-serif;
 	text-align: left;
